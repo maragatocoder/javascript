@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        body {
+            background-color: rgb(44, 134, 134);
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+
+</head>
+<body>
+
+    <h1>Iniciando estudos DOM.</h1>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript.</p>
+    <div id="msg">Clique em mim</div>
+
+    <script>
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        
+        /*
+        window.document.write('Está escrito assim: ' + p1.innerText)
+        window.alert(p1.innerText)
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        */
+
+        var d = window.document.querySelector('div#msg')
+        d.style.color = 'blue'
+
+
+
+
+        // DOM: Document Object Model (modelo de objeto para documentos) - é um conjunto de objetos dentro do navegador que vai dar acesso aos componentes internos do website. DOM não funciona dentro do NodeJS. Ele está presente quando estou rodando JavaScript dentro do navegador.
+
+        // Árvore DOM: ela começa da raiz, e essa raiz dentro do navegador a gente chama de window. Tudo dentro do JavaScript está dentro de um objeto chamado window.
+
+        // window: dentro do window temos vários outros objetos, como por exemplo: location - document - history
+
+        // location: diz a localização do site, qual sua URL, qual a página que eu estou ou qual página eu estava.
+
+        // document: é o documento atual
+
+        // history: ele vai guardando de onde eu vim e para onde eu vou dentro do site, facilitando assim a navegação dentro do meu site.
+
+        // documento -> HTML(parent): dentro do document temos o HTML. Dentro de HTML temos mais dois objetos(child) que são o head e body.
+
+        // --------------------------------------------------------------
+
+        // Selecionando Elementos DOM - 05 métodos:
+        
+        // por Marca:
+        getElementsByTagName()
+
+        // por ID:
+        getElementByID()
+
+        // por Nome:
+        getELementsByName()
+
+        // por Classe:
+        getElementsByClassName()
+
+        // por Seletor:
+        querySelector()
+        querySelectorAll()
+        
+    </script>
+    
+</body>
+</html>
