@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condição em JS</title>
+
+</head>
+
+<body>
+    <h1>Sistema de Imigração</h1>
+    País de origem: <input type="text" name="paisori" id="paisori">
+    <input type="button" value="Confirmar" onclick="selecionar()">
+    <div id="res">
+
+    </div>
+
+
+    <script>
+        function selecionar() {
+            var país = window.document.querySelector('input#paisori')
+            var res = window.document.querySelector('div#res')
+
+            var origem = String(país.value)
+            res.innerHTML = `<p>Seu país de origem é <strong>${origem}</strong></p>`
+
+            if (origem == 'Brasil') {
+                res.innerHTML += ('Você é Brasileiro')
+            } else {
+                res.innerHTML += ('Você é Estrangeiro.')
+            }
+            
+            
+        }
+
+    </script>
+    
+</body>
+</html>
